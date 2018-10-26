@@ -1,0 +1,65 @@
+# This file created by conda-build 3.14.4
+# meta.yaml template originally from:
+# /tcenas/proj/mettools/src/mettools/conda/devel/log4cxx/0.10.0, last modified Wed Oct 10 13:25:33 2018
+# ------------------------------------------------
+
+package:
+    name: log4cxx
+    version: 0.10.0
+source:
+    fn: apache-log4cxx-0.10.0.tar.gz
+    patches:
+        - patches/locale-includes.patch
+        - patches/narrowing.patch
+        - patches/os-x-compat-docs.patch
+        - patches/string-stdio-includes.patch
+        - patches/testsuite-datepattern.patch
+    sha256: 0de0396220a9566a580166e66b39674cb40efd2176f52ad2c65486c99c920c8c
+    url: http://archive.apache.org/dist/logging/log4cxx/0.10.0/apache-log4cxx-0.10.0.tar.gz
+build:
+    number: '5'
+    string: lsstdm_0
+requirements:
+    build:
+        - cloog 0.18
+        - gmp 6.1
+        - isl 0.12
+        - mpc 1.1
+        - mpfr 3.1
+        - {{ compiler('cxx') }}
+    host:
+        - apr 1.6
+        - expat 
+    run:
+        - apr 1.6
+        - apr >=1.6.3,<2.0a0
+        - expat
+        - expat >=2.2.6,<3.0a0
+about:
+    description: 'Apache log4cxx is a logging framework for C++ patterned after Apache
+        log4j,
+
+        which uses Apache Portable Runtime for most platform-specific code and should
+        be
+
+        usable on any platform supported by APR. Apache log4cxx is licensed under
+        the
+
+        Apache License, an open source license certified by the Open Source Initiative.
+
+        '
+    doc_url: 'https://logging.apache.org/log4cxx
+
+        '
+    home: 'https://logging.apache.org/log4cxx
+
+        '
+    license: 'Apache License
+
+        '
+    summary: 'A logging framework for C++ patterned after Apache log4j.
+
+        '
+extra:
+    copy_test_source_files: true
+    final: true

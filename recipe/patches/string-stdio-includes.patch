@@ -1,0 +1,34 @@
+diff -ur apache-log4cxx-0.10.0.orig/src/examples/cpp/console.cpp apache-log4cxx-0.10.0/src/examples/cpp/console.cpp
+--- apache-log4cxx-0.10.0.orig/src/examples/cpp/console.cpp	2008-04-01 00:34:52.000000000 +0200
++++ apache-log4cxx-0.10.0/src/examples/cpp/console.cpp	2014-05-30 19:45:47.336198503 +0200
+@@ -16,6 +16,8 @@
+  */
+ 
+ #include <stdlib.h>
++#include <string.h>
++#include <stdio.h>
+ #include <log4cxx/logger.h>
+ #include <log4cxx/consoleappender.h>
+ #include <log4cxx/simplelayout.h>
+diff -ur apache-log4cxx-0.10.0.orig/src/main/cpp/inputstreamreader.cpp apache-log4cxx-0.10.0/src/main/cpp/inputstreamreader.cpp
+--- apache-log4cxx-0.10.0.orig/src/main/cpp/inputstreamreader.cpp	2008-04-01 00:34:09.000000000 +0200
++++ apache-log4cxx-0.10.0/src/main/cpp/inputstreamreader.cpp	2014-05-30 19:46:53.287202898 +0200
+@@ -20,6 +20,7 @@
+ #include <log4cxx/helpers/exception.h>
+ #include <log4cxx/helpers/pool.h>
+ #include <log4cxx/helpers/bytebuffer.h>
++#include <string.h>
+ 
+ using namespace log4cxx;
+ using namespace log4cxx::helpers;
+diff -ur apache-log4cxx-0.10.0.orig/src/main/cpp/socketoutputstream.cpp apache-log4cxx-0.10.0/src/main/cpp/socketoutputstream.cpp
+--- apache-log4cxx-0.10.0.orig/src/main/cpp/socketoutputstream.cpp	2008-04-01 00:34:09.000000000 +0200
++++ apache-log4cxx-0.10.0/src/main/cpp/socketoutputstream.cpp	2014-05-30 19:47:33.277204603 +0200
+@@ -19,6 +19,7 @@
+ #include <log4cxx/helpers/socketoutputstream.h>
+ #include <log4cxx/helpers/socket.h>
+ #include <log4cxx/helpers/bytebuffer.h>
++#include <string.h>
+ 
+ using namespace log4cxx;
+ using namespace log4cxx::helpers;
