@@ -31,12 +31,10 @@ export CPPFLAGS="-I${PREFIX}/include ${CPPFLAGS} -fPIC"
 export CFLAGS="-I${PREFIX}/include ${CFLAGS} -fPIC"
 export CXXFLAGS="-I${PREFIX}/include ${CXXFLAGS} -fPIC"
 export LDFLAGS="-L${PREFIX}/lib $LDFLAGS"
-export DYLD_LIBRARY_PATH="${PREFIX}/lib $DYLD_LIBRARY_PATH"
+export DYLD_LIBRARY_PATH=${PREFIX}/lib
 
 ./configure --prefix=${PREFIX} \
     --with-pic \
-    --disable-shared \
-    --enable-static \
     --with-apr=${PREFIX}/bin/apr-1-config \
     --with-apr-util=${PREFIX}/bin/apu-1-config
 
