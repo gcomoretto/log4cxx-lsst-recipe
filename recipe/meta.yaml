@@ -17,8 +17,8 @@ source:
     sha256: 0de0396220a9566a580166e66b39674cb40efd2176f52ad2c65486c99c920c8c
     url: http://archive.apache.org/dist/logging/log4cxx/0.10.0/apache-log4cxx-0.10.0.tar.gz
 build:
-    number: '5'
-    string: lsstdm_0
+    number: '1'
+    string: lsstdm_1
 requirements:
     build:
         - cloog 0.18
@@ -28,13 +28,11 @@ requirements:
         - mpfr 3.1
         - {{ compiler('cxx') }}
     host:
-        - apr 1.6
+        - apr 1.6.3
         - expat 
     run:
-        - apr 1.6
-        - apr >=1.6.3,<2.0a0
+        - apr 1.6.3
         - expat
-        - expat >=2.2.6,<3.0a0
 about:
     description: 'Apache log4cxx is a logging framework for C++ patterned after Apache
         log4j,
