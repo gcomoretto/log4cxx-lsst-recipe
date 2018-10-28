@@ -29,7 +29,7 @@ fi
 
 export CPPFLAGS="-I${PREFIX}/include ${CPPFLAGS} -fPIC"
 export CFLAGS="-I${PREFIX}/include ${CFLAGS} -fPIC"
-export CXXFLAGS="-I${PREFIX}/include ${CXXFLAGS} -fPIC"
+export CXXFLAGS="-I${PREFIX}/include ${CXXFLAGS} -fPIC -std=c++14 -D_GLIBCXX_USE_CXX11_ABI=0"
 export LDFLAGS="-L${PREFIX}/lib $LDFLAGS"
 export DYLD_LIBRARY_PATH=${PREFIX}/lib
 
