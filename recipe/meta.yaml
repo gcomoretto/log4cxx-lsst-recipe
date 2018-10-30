@@ -1,8 +1,3 @@
-# This file created by conda-build 3.14.4
-# meta.yaml template originally from:
-# /tcenas/proj/mettools/src/mettools/conda/devel/log4cxx/0.10.0, last modified Wed Oct 10 13:25:33 2018
-# ------------------------------------------------
-
 package:
     name: log4cxx
     version: 0.10.0
